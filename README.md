@@ -1,30 +1,34 @@
-#Connect SDK Simple Photo Share Sample App
+#This Sample app is not currently available
+We hope to make it available soon.
 
-##About
-For information on Connect SDK, visit [connectsdk.com/about](http://www.connectsdk.com/about/).
+#Connect SDK Simple Photo Share for Android
 
-##Dependencies
-- [Android v7 appcompat library](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
-- Android SDK v19 (the app targets v19, but works on v9 and greater)
+Connect SDK is an open source framework that connects your mobile apps with multiple TV platforms. Because most TV platforms support a variety of protocols, Connect SDK integrates and abstracts the discovery and connectivity between all supported protocols.
+
+For more information, visit our [website](http://www.connectsdk.com/).
+
+* [General information about Connect SDK](http://www.connectsdk.com/discover/)
+* [Platform documentation & FAQs](http://www.connectsdk.com/docs/android/)
+* [API documentation](http://www.connectsdk.com/apis/android/)
 
 ##Setup
-0. Import the Android v7 appcompat libary into your Eclipse workspace
-1. Download & unzip the Simple Photo Share App ZIP file
-2. Import the Simple Photo Share project into Eclipse
-3. In the Simple Photo Share project's Properties window, click the Android tab
-4. In the Library pane, click the Add button
-5. Select the android-support-v7-appcompat libary and click OK
-6. Click Apply and then click OK to close the Properties window
-7. Download & unzip the Connect SDK library ZIP file from the [Connect SDK Android Library](http://github.com/ConnectSDK/Connect-SDK-Android-Library) repository
-8. Copy the connect-sdk-framework.jar file into the Simple Photo Share project's libs folder
-9. Build/run the Simple Photo Share app
 
-##See also
-For more information on using Connect SDK, we recommend you review the following material.
+See https://github.com/ConnectSDK/Connect-SDK-Android setup information.
 
-- [Connect SDK Android Library](http://github.com/ConnectSDK/Connect-SDK-Android-Library)
-- [My First Connect SDK App](http://connectsdk.com/getting-started/my-first-android-app/)
-- [API Documentation](http://connectsdk.com/docs/adapi/)
+##Contact
+* Twitter: [@ConnectSDK](https://www.twitter.com/ConnectSDK)
+* Ask a question with the "tv" tag on [Stack Overflow](http://stackoverflow.com/tags/tv)
+* General Inquiries: info@connectsdk.com
+* Developer Support: support@connectsdk.com
+* Partnerships: partners@connectsdk.com
 
 ##License
-Licensing information coming soon.
+
+Connect SDK Sample App by LG Electronics
+
+To the extent possible under law, the person who associated CC0 with
+this sample app has waived all copyright and related or neighboring rights
+to the sample app.
+
+You should have received a copy of the CC0 legalcode along with this
+work. If not, see http://creativecommons.org/publicdomain/zero/1.0/.
