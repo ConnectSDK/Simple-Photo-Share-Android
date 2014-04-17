@@ -41,27 +41,27 @@ public class MainActivity extends Activity {
 		mDevicePicker = new DevicePicker(this);
 		
 		Button imageButton = (Button) findViewById(R.id.imageButton);
-		imageButton.setOnClickListener(showImageClickListener);
+		imageButton.setOnClickListener(mShowImageClickListener);
 	};
 	
-	OnClickListener showImageClickListener = new OnClickListener() {
+	private OnClickListener mShowImageClickListener = new OnClickListener() {
 		
 		@Override
 		public void onClick(View v) {
-			AlertDialog dialog = mDevicePicker.getPickerDialog("Select a device", pickerClickListener);
+			AlertDialog dialog = mDevicePicker.getPickerDialog("Select a device", mPickerClickListener);
 			dialog.show();
 		}
 	};
 	
-	AdapterView.OnItemClickListener pickerClickListener = new AdapterView.OnItemClickListener() {
+	private AdapterView.OnItemClickListener mPickerClickListener = new AdapterView.OnItemClickListener() {
 		public void onItemClick(android.widget.AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 			mDevice = (ConnectableDevice)arg0.getItemAtPosition(arg2);
-			mDevice.addListener(deviceListener);
+			mDevice.addListener(mDeviceListener);
 			mDevice.connect();
 		};
 	};
 	
-	ConnectableDeviceListener deviceListener = new ConnectableDeviceListener() {
+	private ConnectableDeviceListener mDeviceListener = new ConnectableDeviceListener() {
 		
 		@Override
 		public void onPairingRequired(ConnectableDevice device,
@@ -78,19 +78,19 @@ public class MainActivity extends Activity {
 					"Sintel Character Design",
 					"Blender Open Movie Project",
 					"http://ec2-54-201-108-205.us-west-2.compute.amazonaws.com/samples/media/photoIcon.jpg",
-					launchListener);
+					mLaunchListener);
 		}
 		
 		@Override
 		public void onDeviceDisconnected(ConnectableDevice device) {
-			mDevice.removeListener(deviceListener);
+			mDevice.removeListener(mDeviceListener);
 			mDevice = null;
 		}
 		
 		@Override
 		public void onConnectionFailed(ConnectableDevice device,
 				ServiceCommandError error) {
-			mDevice.removeListener(deviceListener);
+			mDevice.removeListener(mDeviceListener);
 			mDevice = null;
 		}
 		
@@ -102,7 +102,7 @@ public class MainActivity extends Activity {
 		}
 	};
 	
-	MediaPlayer.LaunchListener launchListener = new MediaPlayer.LaunchListener() {
+	private MediaPlayer.LaunchListener mLaunchListener = new MediaPlayer.LaunchListener() {
 		
 		@Override
 		public void onError(ServiceCommandError error) {
@@ -113,7 +113,7 @@ public class MainActivity extends Activity {
 		public void onSuccess(MediaLaunchObject object) {
 			Log.d("Connect SDK Sample App", "Successfully launched image!");
 			
-			mDevice.removeListener(deviceListener);
+			mDevice.removeListener(mDeviceListener);
 			mDevice.disconnect();
 			mDevice = null;
 		}
