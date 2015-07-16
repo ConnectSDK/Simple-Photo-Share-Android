@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
         public void onDeviceReady(ConnectableDevice device) {
             device.getMediaPlayer().displayImage(
                     "http://ec2-54-201-108-205.us-west-2.compute.amazonaws.com/samples/media/photo.jpg",
-                    "image/jpg",
+                    "image/jpeg",
                     "Sintel Character Design",
                     "Blender Open Movie Project",
                     "http://ec2-54-201-108-205.us-west-2.compute.amazonaws.com/samples/media/photoIcon.jpg",
